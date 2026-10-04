@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><title>Câu 25</title></head><body>
+<h2>Câu 25 - Tính tiền món ăn</h2>
+<h3>Thức ăn</h3>
+<label><input type="checkbox" class="item" value="35000" data-name="Phở"> Phở - 35.000đ</label><br>
+<label><input type="checkbox" class="item" value="40000" data-name="Cơm gà"> Cơm gà - 40.000đ</label><br>
+<label><input type="checkbox" class="item" value="30000" data-name="Bánh mì"> Bánh mì - 30.000đ</label><br>
+<h3>Nước uống</h3>
+<label><input type="checkbox" class="item" value="15000" data-name="Coca Cola"> Coca Cola - 15.000đ</label><br>
+<label><input type="checkbox" class="item" value="12000" data-name="Nước suối"> Nước suối - 12.000đ</label><br>
+<label><input type="checkbox" class="item" value="20000" data-name="Cà phê"> Cà phê - 20.000đ</label><br>
+<label><input type="checkbox" id="night"> Dùng ban đêm (tăng 10%)</label><br><br>
+<button onclick="calc()">Tính tiền</button><div id="result"></div>
+<script>
+function calc(){let items=document.querySelectorAll('.item:checked'),total=0,html='<h3>Các món đã dùng:</h3><ul>';
+items.forEach(x=>{let p=+x.value;total+=p;html+='<li>'+x.dataset.name+': '+p.toLocaleString('vi-VN')+'đ</li>';});
+html+='</ul>';if(document.getElementById('night').checked){html+='Phụ thu ban đêm 10%: '+(total*.1).toLocaleString('vi-VN')+'đ<br>';total*=1.1;}
+html+='<b>Tổng tiền: '+total.toLocaleString('vi-VN')+'đ</b>';document.getElementById('result').innerHTML=html;}
+</script></body></html>

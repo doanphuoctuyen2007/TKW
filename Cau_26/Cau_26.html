@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><title>Câu 26</title></head><body>
+<h2>Câu 26 - Tính Can Chi</h2>
+<input type="number" id="year" placeholder="Nhập năm dương lịch">
+<button onclick="calc()">Tính Can Chi</button><p id="result"></p>
+<script>
+function calc(){let y=+document.getElementById('year').value;
+if(!Number.isInteger(y)||y<=0){document.getElementById('result').textContent='Năm phải là số nguyên dương!';return;}
+let can=['Canh','Tân','Nhâm','Quý','Giáp','Ất','Bính','Đinh','Mậu','Kỷ'];
+let chi=['Thân','Dậu','Tuất','Hợi','Tý','Sửu','Dần','Mão','Thìn','Tỵ','Ngọ','Mùi'];
+document.getElementById('result').textContent='Năm '+y+' là năm '+can[y%10]+' '+chi[y%12];}
+</script></body></html>

@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><title>Câu 24</title></head><body>
+<h2>Câu 24 - Xác định thứ trong tuần</h2>
+Ngày <input type="number" id="d"> Tháng <input type="number" id="m"> Năm <input type="number" id="y">
+<button onclick="findDay()">Xem thứ</button><p id="result"></p>
+<script>
+function findDay(){let d=+document.getElementById('d').value,m=+document.getElementById('m').value,y=+document.getElementById('y').value;
+let date=new Date(y,m-1,d),days=['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+document.getElementById('result').textContent='Ngày '+d+'/'+m+'/'+y+' là '+days[date.getDay()];}
+</script></body></html>

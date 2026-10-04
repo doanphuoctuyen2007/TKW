@@ -1,0 +1,10 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><title>Câu 22</title></head><body>
+<h2>Câu 22 - Nhân hoặc chia hai số</h2>
+<input type="number" id="a" placeholder="Số thứ nhất">
+<input type="number" id="b" placeholder="Số thứ hai">
+<button onclick="multiply()">Mltiply</button><button onclick="divide()">Devide</button>
+<p id="result"></p>
+<script>
+function multiply(){let a=+document.getElementById('a').value,b=+document.getElementById('b').value;document.getElementById('result').textContent='Kết quả = '+a*b;}
+function divide(){let a=+document.getElementById('a').value,b=+document.getElementById('b').value;document.getElementById('result').textContent=b===0?'Không thể chia cho 0!':'Kết quả = '+a/b;}
+</script></body></html>

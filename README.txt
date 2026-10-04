@@ -1,0 +1,1 @@
+Câu 22-27 JavaScript. Mở các file HTML bằng Chrome/Edge.
